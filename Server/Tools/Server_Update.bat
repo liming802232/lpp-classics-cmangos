@@ -28,24 +28,29 @@ goto update_process
 cls
 echo.
 echo Create local git config file...
+echo 正在下载重制版的基本文件...
 echo.
 cd "%mainfolder%\%installpath%"
 ..\git\cmd\git.exe config user.name "SPP User"
 ..\git\cmd\git.exe config user.email sppuser@spp.com
 echo.
 echo Add realm settings to git system...
+echo 创建本地git系统配置文件...
 echo.
 ..\git\cmd\git.exe add Settings
 ..\git\cmd\git.exe commit -m "Custom Changes"
 cls
 echo.
 echo  Downloading the latest %name% update...
+echo  正在下载最新的 %name% 更新...
 echo.
 ..\git\cmd\git.exe pull https://github.com/celguar/spp-classics-cmangos.git %branch%
 echo.
 echo  Update complete!
+echo  更新完成!
 echo.
 echo  Please run Server_Fix.bat ONLY IF you see merge error above.
+echo  请仅在看到上述合并错误时运行Server_Fix.bat。
 echo.
 ping -n 5 127.0.0.1>nul
 cd "%mainfolder%"
