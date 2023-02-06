@@ -13,8 +13,10 @@ exit
 :not_installed
 echo.
 echo  %NAME% is not installed
+echo  %NAME% 启动器未安装
 echo.
 echo  Please run Server_Update.bat to install
+echo  请运行Server_Update.bat进行安装
 more < "%mainfolder%\Git\robo_logo.txt"
 echo.
 pause
